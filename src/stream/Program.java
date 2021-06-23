@@ -20,9 +20,9 @@ public class Program {
 		
 		//System.out.println(third(songs));
 		
-		//fourth(songs);
+		fourth(songs);
 		
-		fifth(songs);
+		//fifth(songs);
 	}
 	
 	public static void first(List<Songs> songs)
@@ -72,28 +72,26 @@ public class Program {
 				}
 				else
 				{
-					int toReturn = 2;
 					for(int i = 0; i < s1.getName().length(); i++)
 					{
 						if(i < s2.getName().length())
 						{
 							if(s1.getName().charAt(i) == s2.getName().charAt(i))
 							{
-								i++;
-								toReturn = 0;
+								return 0;
 							}
 							else if(s1.getName().charAt(i) > s2.getName().charAt(i))
 							{
-								toReturn = 1;
+								return 1;
 							}
 							else
 							{
-								toReturn = -1;
+								return -1;
 							}
 						}
 					}
-					return toReturn;
 				}
+				return 2;
 			}
 			
 		};
